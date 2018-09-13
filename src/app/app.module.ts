@@ -11,6 +11,7 @@ import { DisplayUserComponent } from './components/administration/display-user/d
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { DisplayUserSingleComponent } from './components/administration/display-user-single/display-user-single.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     DisplayUserComponent,
     NavbarComponent,
     DashboardComponent,
-    SidebarComponent
+    SidebarComponent,
+    DisplayUserSingleComponent
   ],
   imports: [
     BrowserModule,

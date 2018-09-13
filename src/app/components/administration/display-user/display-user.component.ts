@@ -12,8 +12,11 @@ export class DisplayUserComponent implements OnInit {
 
   ngOnInit() {
     this.getUsers();
+    this.getProfils();
   }
+  profils = [{}];
   users = [{nom:"",prenom:"",email:"",login:"",password:"",office:"",profilRole:""}];
+  selectedProfilId = 0;
   
   getUsers(){
     this.userService.recupeUsers().subscribe(users => {this.users = users.json();
@@ -21,5 +24,17 @@ export class DisplayUserComponent implements OnInit {
     
     });
   }
+  
+   getProfils(){
+     this.userService.getAllProfils().subscribe(profils => {
+       this.profils = profils.json();
+       console.log(this.profils);
+     })  
+    } 
+
+    updateSelectedProfilId(id){
+       this.selectedProfilId = id;
+       console.log(this.selectedProfilId);
+    }
 
 }

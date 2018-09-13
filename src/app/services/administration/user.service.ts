@@ -16,4 +16,16 @@ export class UserService {
   recupeUsers(){
     return this.http.get(this.url+"/getuser");
   }
+
+  getOneUser(id){
+    return this.http.get(this.url+"/getuserdto/"+id);
+  }
+
+  getAllProfils(){
+    return this.http.get(this.url+"/getprofildto");
+  }
+
+  updateUserProfil(profilId){
+    
+  }
 }
