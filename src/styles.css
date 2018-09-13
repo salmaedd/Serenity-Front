@@ -148,6 +148,18 @@ a.article:hover {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
+#content-top {
+    width: calc(100% - 250px);
+   /* padding: 40px;*/
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#content-top.active {
+    width: 100%;
+}
 
 #content {
     width: calc(100% - 250px);
@@ -155,8 +167,10 @@ a.article:hover {
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
-    top: 0;
+    top: 10;
     right: 0;
+    margin-top: 100px;
+
 }
 
 #content.active {
@@ -178,6 +192,13 @@ a.article:hover {
         width: 100%;
     }
     #content.active {
+        width: calc(100% - 250px);
+    }
+    /*************/
+    #content-top {
+        width: 100%;
+    }
+    #content-top.active {
         width: calc(100% - 250px);
     }
     #sidebarCollapse span {
