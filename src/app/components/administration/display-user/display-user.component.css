@@ -1,0 +1,62 @@
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+
+    .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    MARGIN-LEFT: 10px;
+}
+
+
+.fa[_ngcontent-c3] {
+    white-space: normal;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    color: white;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 5px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 16%;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #3770ae;
+    border-color: #3770ae;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #56acdb;
+    border-color: #56acdb;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--white);
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

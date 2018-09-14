@@ -1,8 +1,24 @@
-.blue{
-    background:#4169e1;
-    color:#fff;
+.col-md-5 {
+    flex: 0 0 41.666667%;
+    max-width: 10.666667%;
 }
-.grey {
-    background:#dfe1e6;
-    color:#000; 
+
+legend {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+    
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+   
+    text-align: center;
 }

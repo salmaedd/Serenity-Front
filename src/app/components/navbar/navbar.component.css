@@ -1,0 +1,17 @@
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.fa-users {
+    color: black;
+}
+
+.fa-sign-out{
+    color: black;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #3770ae;
+    border-color: #3770ae;
+}

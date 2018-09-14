@@ -1,57 +1,121 @@
-<nav id="sidebar">
-    <div class="sidebar-header">
-        <h3>Bootstrap Sidebar</h3>
-    </div>
-
-    <ul class="list-unstyled components">
-        <p>Dummy Heading</p>
-        <li class="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" [routerLink]="['']">Dashboard</a>
-        </li>
-        <li>
-        <li class="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administration</a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li>
-                    <a href="#" >Role & Fonctions</a>
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="user-wrapper">
+                		  <a class="navbar-brand brand-logo" href="index.html">
+                      <img src="./assets/images/logo.svg" alt="logo" />
+                </a>
+              </div>
+             
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+            <!--  <i class="menu-icon mdi mdi-television"></i> -->
+            <!-- <i class="menu-icon fa fa-dashboard"></i>-->
+             
+             <i class="menu-icon fa fa-tachometer"></i>
+              <span class="menu-title">Dashboard</span>
+              
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <!-- <i class="menu-icon mdi mdi-content-copy"></i> -->
+             <!-- <i class="menu-icon fa fa-th-large"></i> -->
+              <i class="menu-icon dropdown-toggle fa fa-clone"></i>
+              <span class="menu-title"> Administration</span>
+             <!-- <i class="menu-arrow"></i> -->
+             
+             <!-- <i class="fa fa-angle-right"></i> -->
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/buttons.html">Role & Fonction</a>
                 </li>
-                <li>
-                    <a href="#" routerLink="/administration/users">Liste des utilisateurs</a>
+                <li class="nav-item">
+                  <a href="#" routerLink="/administration/users">Liste Utilisateurs</a>
                 </li>
-                
-            </ul>
-        </li>
-        <li>
-            <a href="#">About</a>
-        </li>
-        <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="#">Page 1</a>
+              </ul>
+            </div>
+          </li>
+          
+		   <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui" aria-expanded="false" aria-controls="ui">
+              <i class="menu-icon dropdown-toggle fa fa-clone"></i>
+              <span class="menu-title">Suivi ETPS</span>
+              
+            </a>
+            <div class="collapse" id="ui">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/buttons.html">Liste ETPS</a>
                 </li>
-                <li>
-                    <a href="#">Page 2</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">Ajouter ETP</a>
                 </li>
-                <li>
-                    <a href="#">Page 3</a>
+              </ul>
+            </div>
+          </li>
+          
+		   <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#toto" aria-expanded="false" aria-controls="toto">
+              <i class="menu-icon dropdown-toggle fa fa-clone"></i>
+              <span class="menu-title">Suivi Projets</span>
+              
+            </a>
+            <div class="collapse" id="toto">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/buttons.html">Liste Projets</a>
                 </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">Portfolio</a>
-        </li>
-        <li>
-            <a href="#">Contact</a>
-        </li>
-    </ul>
-
-    <ul class="list-unstyled CTAs">
-        <li>
-            <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-        </li>
-        <li>
-            <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-        </li>
-    </ul>
-</nav>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">Ajouter Projet</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+		  
+		  <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#dada" aria-expanded="false" aria-controls="dada">
+              <i class="menu-icon dropdown-toggle fa fa-clone"></i>
+              <span class="menu-title">RUP</span>
+              
+            </a>
+            <div class="collapse" id="dada">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/buttons.html">Liste Programmes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">Ajouter Programme</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+		  
+		   <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#fofo" aria-expanded="false" aria-controls="fofo">
+            <!--  <i class="menu-icon fa fa-archive" style="font-size:15px"></i> -->
+              <i class="menu-icon dropdown-toggle fa fa-clone"></i>
+              <span class="menu-title"> Paramétrages</span>
+              
+            </a>
+            
+            <div class="collapse" id="fofo">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/samples/blank-page.html"> Test1 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/samples/login.html"> Test2 </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+		  
+		  
+        </ul>
+      </nav>
