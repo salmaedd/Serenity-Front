@@ -16,4 +16,21 @@ export class UserService {
   recupeUsers(){
     return this.http.get(this.url+"/getuser");
   }
+
+  getOneUser(id){
+    return this.http.get(this.url+"/getuserdto/"+id);
+  }
+
+  getAllProfils(){
+    return this.http.get(this.url+"/getprofildto");
+  }
+
+  //gets the user and not the dto
+  getTheUser(id){
+    return this.http.get(this.url+"/getuser/"+id);
+  }
+
+  updateUserProfil(user){
+    return this.http.put(this.url+"/updateuser",user);
+  }
 }

@@ -11,6 +11,7 @@ import { DisplayUserComponent } from './components/administration/display-user/d
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+
 import { AddEtpComponent } from './components/suivi-etp/add-etp/add-etp.component';
 import { DetailEtpComponent } from './components/suivi-etp/detail-etp/detail-etp.component';
 import { UpdateEtpComponent } from './components/suivi-etp/update-etp/update-etp.component';
@@ -25,6 +26,7 @@ import { DeleteEtpComponent } from './components/suivi-etp/delete-etp/delete-etp
     DisplayUserComponent,
     NavbarComponent,
     DashboardComponent,
+    SidebarComponent
     SidebarComponent,
     AddEtpComponent,
     DetailEtpComponent,

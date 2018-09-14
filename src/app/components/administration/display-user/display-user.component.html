@@ -1,5 +1,5 @@
 <a class="btn btn-success" routerLink="/administration/adduser"  style="float:right !important; "><i class="fa fa-plus"></i></a>
-<table class="table table-stripped" style="margin-top:10px;">
+<table class="table table-striped table-responsive" style="margin-top:10px;">
   <thead>
     <th>
       nom
@@ -9,6 +9,9 @@
       </th>
       <th>
           email
+        </th>
+        <th>
+          Profil
         </th>
         <th>
             login
@@ -25,13 +28,40 @@
         <td>{{user.nom}}</td>
         <td>{{user.prenom}}</td>
         <td>{{user.email}}</td>
+        <td><input type="text" readonly="" value="{{user.profilRole}}"></td>
         <td>{{user.login}}</td>
         <td>{{user.office}}</td>
-        <td><a class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
-        <td><a class="btn btn-warning"><i class="fa fa-eye"></i></a></td>
+        <td><a class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="setUserId(user.id)"><i class="fa fa-pencil"></i></a></td>
+        <td><a class="btn btn-warning" [routerLink]="['/administration/user/',user.id]"><i class="fa fa-eye"></i></a></td>
     </tr>
     
 
   </tbody>
 
 </table>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Mise à jour de profil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <div class="form-group row">
+              
+                    <label for="nom" class="col-form-label col-2">Profil</label>
+                    <select type="text" class="form-control col-9" name="profil" id="nom" (change)="updateSelectedProfilId($event.target.value)">
+                      <option *ngFor="let profil of profils" [value]="profil.id">{{profil.role}}</option>
+                      <option  value="2">em</option>
+                    </select>   
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="updateProfil()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
