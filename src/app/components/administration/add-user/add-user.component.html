@@ -1,35 +1,46 @@
 <form #f="ngForm" (submit)="adduser()">
+  
   <fieldset>
     <legend>Legend</legend>
   
     <div class="form-group row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 alert" >
           <label for="nom">Nom</label>
-          <input type="text" class="form-control" name="nom" #firstName [(ngModel)]="user.nom" id="nom" aria-describedby="emailHelp" placeholder="Nom">
-      </div>
-      <div class="col-sm-6">
+          <input class="form-control" name="nom" #firstName [(ngModel)]="user.nom" id="nom" aria-describedby="emailHelp" placeholder="Nom">
+                 
+        </div>
+
+      <div class="col-sm-6 alert">
         <label for="prenom">Prenom</label>
-        <input type="text" class="form-control" name="prenom" #lastName [(ngModel)]="user.prenom" id="prenom" aria-describedby="emailHelp" placeholder="Prenom">
+        <input  type="text" class="form-control" name="prenom" #lastName [(ngModel)]="user.prenom" id="prenom" aria-describedby="emailHelp" placeholder="Prenom">
+                  
       </div>
     </div>
+
     <div class="form-group row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 alert">
             <label for="email">Email</label>
-            <input type="text" class="form-control" name="email" #email [(ngModel)]="user.email" id="email" aria-describedby="emailHelp" placeholder="email">
-        </div>
-        <div class="col-sm-6">
+            <input  type="text" class="form-control" name="email" #email [(ngModel)]="user.email" id="email" aria-describedby="emailHelp" placeholder="email">
+                      
+          </div>
+        <div class="col-sm-6 alert">
           <label for="login">Login</label>
-          <input type="text" class="form-control" name="login" #login [(ngModel)]="user.login" id="login" aria-describedby="emailHelp" placeholder="login">
+          <input  type="text" class="form-control" name="login" #login [(ngModel)]="user.login" id="login" aria-describedby="emailHelp" placeholder="login">
+                    
+                    
         </div>
     </div>
     <div class="form-group row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 alert">
             <label for="mdp">Mot de Passe</label>
-            <input type="password" class="form-control" name="mdp" #mdp [(ngModel)]="user.password" id="mdp" aria-describedby="emailHelp" placeholder="mot de passe">
-        </div>
-        <div class="col-sm-6">
+            <input  type="password" class="form-control" name="mdp" #mdp [(ngModel)]="user.password" id="mdp" aria-describedby="emailHelp" placeholder="mot de passe">
+       
+                      
+          </div>
+        <div class="col-sm-6 alert">
           <label for="office">Office</label>
-          <input type="text" class="form-control" name="office" #office [(ngModel)]="user.office" id="office" aria-describedby="emailHelp" placeholder="office">
+          <input  type="text" class="form-control" name="office" #office [(ngModel)]="user.office" id="office" aria-describedby="emailHelp" placeholder="office">
+                       
         </div>
     </div>
     <!-- <div class="form-group">
@@ -101,6 +112,6 @@
         </label>
       </div>
     </fieldset> -->
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" >Submit</button>
   </fieldset>
 </form>

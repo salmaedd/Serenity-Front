@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
@@ -17,6 +18,8 @@ export class AddUserComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+  
   adduser(){
     this.userService.saveUser(this.user).subscribe(user => {this.user = user.json();
       this.route.navigate(['administration/users']);
