@@ -25,7 +25,12 @@ export class UserService {
     return this.http.get(this.url+"/getprofildto");
   }
 
-  updateUserProfil(profilId){
-    
+  //gets the user and not the dto
+  getTheUser(id){
+    return this.http.get(this.url+"/getuser/"+id);
+  }
+
+  updateUserProfil(user){
+    return this.http.put(this.url+"/updateuser",user);
   }
 }

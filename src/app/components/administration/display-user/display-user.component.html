@@ -28,10 +28,10 @@
         <td>{{user.nom}}</td>
         <td>{{user.prenom}}</td>
         <td>{{user.email}}</td>
-        <td>{{user.profilRole}}</td>
+        <td><input type="text" readonly="" value="{{user.profilRole}}"></td>
         <td>{{user.login}}</td>
         <td>{{user.office}}</td>
-        <td><a class="btn btn-success" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-pencil"></i></a></td>
+        <td><a class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="setUserId(user.id)"><i class="fa fa-pencil"></i></a></td>
         <td><a class="btn btn-warning" [routerLink]="['/administration/user/',user.id]"><i class="fa fa-eye"></i></a></td>
     </tr>
     
