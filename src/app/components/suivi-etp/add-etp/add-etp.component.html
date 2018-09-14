@@ -1,0 +1,144 @@
+<form #f="ngForm" (submit)="addetp()">
+  
+  <fieldset>
+    <legend>Ajouter ETP</legend>
+  
+    <div class="form-group row">
+      <div class="col-sm-6  mx-auto alert" >
+          <label for="nom">Nom</label>
+          <input  #nom="ngModel" type="text" required minlength="3" maxlength="10" pattern="[a-zA-Z0-9]*"  class="form-control" name="nom" #firstName [(ngModel)]="etp.nom" id="nom" aria-describedby="emailHelp" placeholder="Nom">
+                  <div class="alert alert-danger" *ngIf="nom.invalid && nom.touched">
+                    <div *ngIf="nom.errors.required">  Ce champ est obligatoire !</div> 
+                    <div *ngIf="nom.errors.minlength"> Ce champ doit avoir au moin 3 chars !</div> 
+                    <div *ngIf="nom.errors.maxlength"></div> 
+                    <div *ngIf="nom.errors.pattern"> Ce champs ne respect pas le Pattern</div> 
+                  </div>  
+        </div>
+  
+   <div class="col-sm-6 mx-auto alert">
+        <label for="prenom">Prenom</label>
+        <input type="text" class="form-control" name="prenom" #lastName [(ngModel)]="etp.prenom" id="prenom" aria-describedby="emailHelp" placeholder="Prenom">
+                  
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+        <div class="col-sm-6 mx-auto alert">
+          <label  for="inputGroupSelect01">Office</label>
+         <!--   <input type="text" class="form-control" name="office" #office [(ngModel)]="etp.office" id="office" aria-describedby="emailHelp" placeholder="office">-->
+            <div class="input-group mb-3">
+              
+              <select class="custom-select" id="inputGroupSelect01">
+                <option value="1">Casablanca</option>
+                <option value="2">Rabat</option>
+              </select>
+            </div>
+            
+
+
+          </div>
+        <div class="col-sm-6 mx-auto alert">
+          <label for="inputGroupSelect01">Type ETP</label>
+         <!-- <input type="text" class="form-control" name="type" #type [(ngModel)]="etp.type" id="type" aria-describedby="emailHelp" placeholder="type">-->
+
+          <div class="input-group mb-3">
+              
+              <select class="custom-select" id="inputGroupSelect01">
+                <option value="1">Stagiaire</option>
+                <option value="2">Jeune Diplômé</option>
+                <option value="2">Dispo</option>
+              </select>
+            </div>          
+                     
+        </div>
+    </div>
+    
+    <div class="form-group row">
+      <div class="col-sm-6 mx-auto alert">
+        <label class="input-group-text" for="inputGroupSelect01">Date Affectation DIGICAMP  
+     <input type="date" class="form-control" name="dateaffect"  id="dateaffect" aria-describedby="emailHelp" placeholder="dateaffect">
+        </label>  
+      </div>
+      
+
+    
+        <div class="col-sm-6 mx-auto alert">
+          <label class="input-group-text" for="inputGroupSelect01">Date Staffing Confirmé  
+       <input type="date" class="form-control" name="dateaffect"  id="dateaffect" aria-describedby="emailHelp" placeholder="dateaffect">
+          </label>  
+        </div>
+
+      
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-6 mx-auto alert">
+        <label for="grade">Grade</label>
+    <!--    <input type="text" class="form-control" name="grade" #grade [(ngModel)]="etp.grade" id="grade" aria-describedby="emailHelp" placeholder="grade"> -->
+        <div class="input-group mb-3">
+          
+          <select class="custom-select" id="inputGroupSelect01">
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="2">C</option>
+            <option value="2">D</option>
+            <option value="2">E</option>
+          </select>
+        </div> 
+      </div>
+   
+      <div class="col-sm-6 mx-auto alert">
+        <label for="skills">Skills</label>
+        <input type="text" class="form-control" name="skills" #skills [(ngModel)]="etp.skills" id="skilss" aria-describedby="emailHelp" placeholder="skills">          
+      </div>
+    </div>
+
+    <div class="form-group row">
+      
+
+      <div class="col-sm-6 mx-auto alert">
+        <label for="pu">PU</label>
+        <input type="text" class="form-control" name="pu" #pu [(ngModel)]="etp.pu_affectation_depart" id="pu" aria-describedby="emailHelp" placeholder="pu">
+                  
+                   
+      </div>
+
+
+
+      <div class="col-sm-6 mx-auto alert">
+        <label for="deleveryunit">Delevery Unit de staffing</label>
+        <input type="text" class="form-control" name="deleveryunit" #deleveryunit [(ngModel)]="etp.delevery_unit_staffing" id="deleveryunit" aria-describedby="emailHelp" placeholder="deleveryunit">
+                  
+                   
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-6  alert">
+        <label for="techno">Technologies</label>
+        <!--<input type="text" class="form-control" name="techno" #techno [(ngModel)]="etp.login" id="techno" aria-describedby="emailHelp" placeholder="techno">-->
+        
+        <div class="input-group mb-3">
+          
+          <select class="custom-select" id="inputGroupSelect01">
+            <option value="1">JAVA</option>
+            <option value="2">PHP</option>
+            <option value="2">ANGULAR</option>
+            <option value="2">.NET</option>
+            <option value="2">JEE</option>
+          </select>
+        </div>       
+                   
+      </div>
+    </div>
+
+
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+
+

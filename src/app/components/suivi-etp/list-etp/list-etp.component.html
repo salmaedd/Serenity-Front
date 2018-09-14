@@ -1,0 +1,51 @@
+<a class="btn btn-success" routerLink="/suivi-etp/add-etp"  style="float:right !important; "><i class="fa fa-plus"></i></a>
+<table class="table table-stripped" style="margin-top:10px;">
+  <thead>
+    <th>
+      Nom
+    </th>
+    <th>
+        Prenom
+      </th>
+      <th>
+          Office
+        </th>
+        <th>
+            Type
+          </th>
+          <th>
+              Pu
+            </th>
+            <th>
+              Grade
+            </th>
+            <th>
+              Projet de Staffing
+            </th>
+            <th>
+              Action
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let etp of etps">
+        <td>{{etp.nom}}</td>
+        <td>{{etp.prenom}}</td>
+        <td>{{etp.office}}</td>
+        <td>{{etp.type_Etp}}</td>
+        <td>{{etp.pu_affectation_depart}}</td>
+        <td>{{etp.grade_Etp}}</td>
+        <td>{{etp.projet_staffing}}</td>
+       
+              <td><a class="btn btn-success"><i class="fa fa-pencil"></i></a></td>
+              <td><a class="btn btn-warning"><i class="fa fa-eye"></i></a></td>
+              <td><a class="btn btn-warning"><i class="fa fa-trash"></i></a></td> 
+      
+    </tr>
+    
+
+  </tbody>
+
+</table>
